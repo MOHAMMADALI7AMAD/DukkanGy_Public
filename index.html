@@ -44,6 +44,7 @@
             margin-bottom: 30px; 
             line-height: 1.6; 
         }
+        /* ✅ زر التحميل */
         .download-btn { 
             background-color: #8D4B38; 
             color: white; 
@@ -68,6 +69,22 @@
             color: #999; 
             line-height: 1.5;
         }
+        /* ✅ تصميم صندوق التنبيه (تم تعديل المسافات ليكون في الأسفل) */
+        .vpn-note {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 25px; /* مسافة من الأعلى لبعده عن الملاحظات */
+            border: 1px solid #ffeeba;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -82,9 +99,16 @@
         <!-- زر التحميل مع الرابط المباشر -->
         <a href="https://github.com/MOHAMMADALI7AMAD/DukkanGy_v1.0.0/releases/download/v1.0.0/DukkanGy_v.1.0.apk" class="download-btn">تحميل التطبيق</a>
         
+        <!-- ملاحظات التثبيت -->
         <div class="instructions">
             قد يطلب منك المتصفح السماح بتثبيت التطبيقات.<br>
             اضغط على "تنزيل" ثم "فتح" لتثبيت التطبيق.
+        </div>
+
+        <!-- ✅ صندوق التنبيه للـ VPN في الأسفل تماماً -->
+        <div class="vpn-note">
+            <span>⚠️</span>
+            <span>إذا واجهتك مشكلة في التحميل، يرجى استخدام كاسر الحجب (VPN)</span>
         </div>
     </div>
 </body>
