@@ -44,15 +44,16 @@
             margin-bottom: 30px; 
             line-height: 1.6; 
         }
+        /* ✅ تنسيق زر التحميل */
         .download-btn { 
             background-color: #8D4B38; 
-            color: white; 
+            color: white !important; 
             padding: 15px 30px; 
             border: none; 
             border-radius: 50px; 
             font-size: 18px; 
             font-weight: bold; 
-            text-decoration: none; 
+            text-decoration: none !important; 
             display: inline-block; 
             transition: transform 0.2s, background-color 0.2s; 
             box-shadow: 0 4px 15px rgba(141, 75, 56, 0.3); 
@@ -83,6 +84,17 @@
             gap: 8px;
             line-height: 1.5;
         }
+        .privacy-link {
+            margin-top: 15px; 
+            margin-bottom: 20px; 
+            text-align: center;
+        }
+        .privacy-link a {
+            color: #8D4B38; 
+            text-decoration: underline; 
+            font-size: 14px; 
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -93,8 +105,8 @@
         
         <p>حمّل التطبيق الآن واستمتع بأفضل تجربة تسوق. توصيل سريع، أسعار منافسة، وكل ما تحتاجه في مكان واحد.</p>
         
-        <!-- ✅ رابط التحميل المحدث (v1.1.0) -->
-        <a href="https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/v1.2.0/DukkanGy_v1.2.0.apk">تحميل التطبيق</a>
+        <!-- ✅ رابط التحميل (تأكد من تحديث رقم الإصدار هنا في كل مرة) -->
+        <a href="https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/v1.2.0/DukkanGy_v1.2.apk" class="download-btn">تحميل التطبيق</a>
         
         <div class="instructions">
             قد يطلب منك المتصفح السماح بتثبيت التطبيقات.<br>
@@ -106,9 +118,8 @@
             <span>إذا واجهتك مشكلة في التحميل، يرجى استخدام كاسر الحجب (VPN)</span>
         </div>
 
-        <!-- ✅ رابط سياسة الخصوصية المحدث -->
-        <div style="margin-top: 15px; margin-bottom: 20px; text-align: center;">
-            <a href="https://mohammadali7amad.github.io/DukkanGy_Public/DukkanGy_Privacy.html" target="_blank" style="color: #8D4B38; text-decoration: underline; font-size: 14px; font-weight: bold;">
+        <div class="privacy-link">
+            <a href="https://mohammadali7amad.github.io/DukkanGy_Public/DukkanGy_Privacy.html" target="_blank">
                 أضغط هنا للاطلاع على "سياسة الخصوصية الخاصة بتطبيق دكنجي"
             </a>
         </div>
