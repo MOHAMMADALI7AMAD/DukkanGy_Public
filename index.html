@@ -95,6 +95,23 @@
             font-size: 14px; 
             font-weight: bold;
         }
+        /* ✅ رابط مخفي وهادئ للموردين في الأسفل */
+        .vendor-link {
+            margin-top: 20px;
+            border-top: 1px dashed #e0d0bc;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .vendor-link a {
+            color: #888;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.2s;
+        }
+        .vendor-link a:hover {
+            color: #8D4B38;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -105,9 +122,8 @@
         
         <p>حمّل التطبيق الآن واستمتع بأفضل تجربة تسوق. توصيل سريع، أسعار منافسة، وكل ما تحتاجه في مكان واحد.</p>
         
-        <!-- ✅ رابط التحميل (تأكد من تحديث رقم الإصدار هنا في كل مرة) -->
-        <a href="https://patient-bonus-c316.mhmdamen.workers.dev/https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/v1.10.7/DukkanGy_v1.10.7.apk
-" class="download-btn">تحميل التطبيق</a>
+        <!-- ✅ رابط التحميل الأساسي -->
+        <a href="https://patient-bonus-c316.mhmdamen.workers.dev/https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/v1.10.7/DukkanGy_v1.10.7.apk" class="download-btn">تحميل التطبيق</a>
         
         <div class="instructions">
             قد يطلب منك المتصفح السماح بتثبيت التطبيقات.<br>
@@ -117,6 +133,13 @@
         <div class="privacy-link">
             <a href="https://mohammadali7amad.github.io/DukkanGy_Public/DukkanGy_Privacy.html" target="_blank">
                 أضغط هنا للاطلاع على "سياسة الخصوصية الخاصة بتطبيق دكنجي"
+            </a>
+        </div>
+
+        <!-- ✅ رابط تطبيق الإدخال محدث برقم الإصدار الجديد -->
+        <div class="vendor-link">
+            <a href="https://patient-bonus-c316.mhmdamen.workers.dev/https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/v1.1.0/DukkanGy_Entry_v1.1.0.apk">
+                هل أنت صاحب متجر؟ اضغط هنا لتحميل تطبيق الإدخال
             </a>
         </div>
     </div>
