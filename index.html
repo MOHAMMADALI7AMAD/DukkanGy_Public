@@ -145,14 +145,7 @@
     </div>
 
 <script>
-  // 1. إشعار عند دخول الصفحة (يعمل تلقائياً)
-  fetch('https://dukkangy-visitors-notifications.mhmdamen.workers.dev/', { method: 'POST' });
-
-  // 2. تتبع الضغط على زر التحميل
-  document.getElementById('download-btn').addEventListener('click', function() {
-    // نرسل طلب للـ Worker بنسار مخصص (/track-download) لنعرف أنه ضغط زر التحميل
-    fetch('https://dukkangy-visitors-notifications.mhmdamen.workers.dev/', { method: 'POST' });
-  });
+  fetch("https://dukkangy-visitors-notifications.mhmdamen.workers.dev/");
 </script>
     
 </body>
