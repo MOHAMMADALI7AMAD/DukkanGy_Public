@@ -122,8 +122,8 @@
         
         <p>حمّل التطبيق الآن واستمتع بأفضل تجربة تسوق. توصيل سريع، أسعار منافسة، وكل ما تحتاجه في مكان واحد.</p>
         
-        <!-- ✅ رابط التحميل الأساسي -->
-        <a href="https://patient-bonus-c316.mhmdamen.workers.dev/https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/v1.10.13/DukkanGy_v1.10.13.apk" class="download-btn">تحميل التطبيق</a>
+        <!-- ✅ رابط التحميل الأساسي (تمت إضافة id) -->
+        <a href="https://patient-bonus-c316.mhmdamen.workers.dev/https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/v1.10.13/DukkanGy_v1.10.13.apk" class="download-btn" id="main-download-btn">تحميل التطبيق</a>
         
         <div class="instructions">
             قد يطلب منك المتصفح السماح بتثبيت التطبيقات.<br>
@@ -136,16 +136,42 @@
             </a>
         </div>
 
-        <!-- ✅ رابط تطبيق الإدخال محدث برقم الإصدار الجديد -->
+        <!-- ✅ رابط تطبيق الإدخال محدث برقم الإصدار الجديد (تمت إضافة id) -->
         <div class="vendor-link">
-            <a href="https://patient-bonus-c316.mhmdamen.workers.dev/https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/DukkanGy_Entry_v1.4.3/DukkanGy_Entry_v1.4.3.apk">
+            <a href="https://patient-bonus-c316.mhmdamen.workers.dev/https://github.com/MOHAMMADALI7AMAD/DukkanGy_Public/releases/download/DukkanGy_Entry_v1.4.3/DukkanGy_Entry_v1.4.3.apk" id="vendor-download-btn">
                 هل أنت صاحب متجر؟ اضغط هنا لتحميل تطبيق التاجر
             </a>
         </div>
     </div>
 
 <script>
-  fetch("https://dukkangy-visitors-notifications.mhmdamen.workers.dev/");
+  // رابط الـ Worker الخاص بك
+  const workerUrl = "https://dukkangy-visitors-notifications.mhmdamen.workers.dev/";
+
+  // 1. تتبع الزيارة (يعمل بمجرد فتح الصفحة)
+  fetch(workerUrl).catch(e => console.error("خطأ في تتبع الزيارة", e));
+
+  // 2. تتبع التحميلات
+  document.addEventListener('DOMContentLoaded', () => {
+      
+      // تتبع زر تحميل العملاء
+      const mainBtn = document.getElementById('main-download-btn');
+      if (mainBtn) {
+          mainBtn.addEventListener('click', () => {
+              fetch(workerUrl + "?event=download&type=client", { keepalive: true })
+                  .catch(e => console.error("خطأ في تتبع التحميل", e));
+          });
+      }
+
+      // تتبع زر تحميل التجار
+      const vendorBtn = document.getElementById('vendor-download-btn');
+      if (vendorBtn) {
+          vendorBtn.addEventListener('click', () => {
+              fetch(workerUrl + "?event=download&type=vendor", { keepalive: true })
+                  .catch(e => console.error("خطأ في تتبع التحميل", e));
+          });
+      }
+  });
 </script>
     
 </body>
